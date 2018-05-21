@@ -10,6 +10,7 @@ const formSubmit = function(event){
   const author = this.author.value;
   const category = document.querySelector('input[name="category"]:checked').value;
   const genreDropdown = this.genre.value;
+  const rating = this.rating.value;
 
   const loggedBookTitle = document.querySelector('#loggedTitle');
   loggedBookTitle.textContent = `Book Title: ${bookTitle}`;
@@ -22,5 +23,10 @@ const formSubmit = function(event){
 
   const loggedGenre = document.querySelector('#loggedGenre');
   loggedGenre.textContent = `Genre or Topic: ${genreDropdown}`
+
+  const loggedRating = document.querySelector('#loggedRating');
+  loggedRating.textContent = `Rating: ${rating}`
+
+  document.querySelector('#form').reset();
 
 }
